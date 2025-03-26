@@ -207,8 +207,10 @@ function PostCard({ post, dbUserId }: { post: Post; dbUserId: string | null }) {
                         <span className="text-sm text-muted-foreground">
                           @{comment.author.username}
                         </span>
-                        <span className="text-sm text-muted-foreground">·</span>
-                        <span className="text-sm text-muted-foreground">
+                        <span className="hidden text-sm text-muted-foreground sm:block">
+                          ·
+                        </span>
+                        <span className="text-[12px] sm:text-sm text-muted-foreground">
                           {formatDistanceToNow(new Date(comment.createdAt))} ago
                         </span>
                       </div>
