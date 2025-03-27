@@ -117,6 +117,7 @@ function NotificationsPage() {
                                   alt="Post content"
                                   priority
                                   className="mt-2 rounded-md w-full max-w-[200px] h-auto object-cover"
+                                  fill
                                 />
                               </div>
                               // <img
