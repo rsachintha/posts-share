@@ -11,6 +11,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Card, CardContent } from "./ui/card";
 import Link from "next/link";
+import Image from "next/image";
 import { Avatar, AvatarImage } from "./ui/avatar";
 import { formatDistanceToNow } from "date-fns";
 import { DeleteAlertDialog } from "./DeleteAlertDialog";
@@ -131,11 +132,17 @@ function PostCard({ post, dbUserId }: { post: Post; dbUserId: string | null }) {
           {/* POST IMAGE */}
           {post.image && (
             <div className="rounded-lg overflow-hidden">
-              <img
+              <Image
                 src={post.image}
                 alt="Post content"
                 className="w-full h-auto object-cover"
+                priority
               />
+              {/* <img
+                src={post.image}
+                alt="Post content"
+                className="w-full h-auto object-cover"
+              /> */}
             </div>
           )}
 
